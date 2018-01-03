@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
 
 import MyTextInput from './MyTextInput'
+import styles from './MyForm.styles';
 
 function MyForm(props) {
 
@@ -10,20 +11,20 @@ function MyForm(props) {
     'submitSucceeded', 'submitFailed'];
 
   return (
-    <ScrollView keyboardShouldPersistTaps={'handled'}>
-      <Text>Email</Text>
+    <ScrollView style={styles.container} keyboardShouldPersistTaps={'handled'}>
       <Field
         name={'email'}
         component={MyTextInput}
+        placeholder={'Email'}
       />
-      <Text>The form is:</Text>
-      {
-        formStates.filter((state) => props[state]).map((state) => {
-          return <Text key={state}> - { state }</Text>
-        })
-      }
+      <Field
+        name={'password'}
+        component={MyTextInput}
+        placeholder={'Password'}
+        secureTextEntry
+      />
       <TouchableOpacity onPress={props.handleSubmit}>
-        <Text>Submit!</Text>
+        <Text style={styles.formSubmit}>Submit!</Text>
       </TouchableOpacity>
     </ScrollView>
   );
