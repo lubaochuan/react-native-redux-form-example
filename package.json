@@ -9,6 +9,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-24.0.0.tar.gz",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "redux-form": "^7.2.0"
+    "redux-form": "^7.2.0",
+    "redux-logger": "^3.0.6"
   }
 }

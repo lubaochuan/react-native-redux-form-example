@@ -7,4 +7,5 @@ npm install redux --save
 npm install redux-form --save
 npm install moment --save
 npm install prop-types --save
+npm install redux-logger --save
 ```
